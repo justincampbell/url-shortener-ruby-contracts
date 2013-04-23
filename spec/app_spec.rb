@@ -1,4 +1,4 @@
-require './test/test_helper'
+require './spec/spec_helper'
 
 describe "/" do
   before { get '/' }
