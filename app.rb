@@ -9,6 +9,9 @@ end
 
 get '/shorten' do
   url = params[:url]
+
+  halt 400 unless url
+
   token = shortener.shorten(url)
 
   [201, "/#{token}"]

@@ -11,8 +11,9 @@ describe "/" do
 end
 
 describe "/shorten" do
-  before { get "/shorten?url=#{url}" }
+  before { get path }
 
+  let(:path) { "/shorten?url=#{url}" }
   let(:url) { "http://justincampbell.me" }
 
   it "returns created with a token as a path" do
@@ -20,6 +21,14 @@ describe "/shorten" do
 
     assert_equal 201, last_response.status
     assert_equal "/#{token}", last_response.body
+  end
+
+  describe "with no url" do
+    let(:path) { "/shorten" }
+
+    it "respends with bad request" do
+      assert_equal 400, last_response.status
+    end
   end
 end
 
