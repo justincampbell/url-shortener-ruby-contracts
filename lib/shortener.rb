@@ -1,4 +1,8 @@
 class Shortener
+  def self.instance
+    @instance ||= new
+  end
+
   def shorten(url)
     token = next_token
     urls[token] = url
