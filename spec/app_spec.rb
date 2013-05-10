@@ -5,7 +5,7 @@ describe "/" do
 
   it "redirects to github" do
     assert_equal 302, last_response.status
-    assert_equal "https://github.com/justincampbell/language-exploration",
+    assert_equal "https://github.com/justincampbell/url-shorteners",
       last_response.header['Location']
   end
 end

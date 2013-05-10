@@ -4,7 +4,7 @@ require 'sinatra'
 require 'shortener'
 
 get '/' do
-  redirect "https://github.com/justincampbell/language-exploration"
+  redirect "https://github.com/justincampbell/url-shorteners"
 end
 
 get '/shorten' do
