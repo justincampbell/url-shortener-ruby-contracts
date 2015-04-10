@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'contracts'
 gem 'rake'
 gem 'sinatra'
 gem 'thin'

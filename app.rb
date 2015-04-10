@@ -1,5 +1,8 @@
 $: << File.expand_path('./lib')
 
+require 'contracts'
+include Contracts
+
 require 'sinatra'
 require 'shortener'
 
