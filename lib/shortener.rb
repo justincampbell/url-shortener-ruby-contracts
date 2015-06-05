@@ -2,7 +2,7 @@ class Shortener
   Token = String
   Url = String
 
-  Contract nil => Shortener
+  Contract Shortener
   def self.instance
     @instance ||= new
   end
@@ -21,22 +21,22 @@ class Shortener
 
   private
 
-  Contract nil => HashOf[Token, Url]
+  Contract HashOf[Token, Url]
   def urls
     @urls ||= {}
   end
 
-  Contract nil => Token
+  Contract Token
   def next_token
     encode_id(next_id)
   end
 
-  Contract nil => Pos
+  Contract Pos
   def next_id
     id_generator.next
   end
 
-  Contract nil => Enumerator
+  Contract Enumerator
   def id_generator
     @id_generator ||= (1..Float::INFINITY).enum_for
   end

@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    contracts (0.8)
+    contracts (0.9)
     dotenv (0.7.0)
     foreman (0.63.0)
       dotenv (>= 0.7)
